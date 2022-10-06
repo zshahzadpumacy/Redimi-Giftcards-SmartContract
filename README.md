@@ -28,3 +28,6 @@ This module involves development and deploying of smart contracts on Blockchain 
  
  * Redemption of coupons: Similar to gift cards, coupons can also be redeemed at the supported retailers where relevant discount is provided to the customer based on the coupon description including discount type, discount value etc. 
  
+ ## 2. Platform Provider API (PP API)
+ 
+ PP API is another crucial module in the Redimi solution which communicates data between all the other modules. STRAPI, an opensource Nodejs based Headless Content Management System (CMS) was used to setup a platform for interacting with the smart contracts. PP API serves as a middleware between the blockchain, Mobile Applications, POS Systems and Retailer API (if available). The API allows management of Gift Cards, Coupons, Transactions, Malls/Retailers by serving as the backend-end for the smart contracts. Every change made on the smart contracts is visible on the PP API. Strapi also allows management of data using an integrated front-end. 
