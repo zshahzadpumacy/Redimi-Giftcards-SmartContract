@@ -1,4 +1,4 @@
-# Redimi-Voucher-SmartContract\
+# Redimi-Voucher-SmartContract
 
 Redimi solution comprises of several modules where each module accomplishes a crucial task. Following is the list of these modules:
 
@@ -30,4 +30,20 @@ This module involves development and deploying of smart contracts on Blockchain 
  
  ## 2. Platform Provider API (PP API)
  
- PP API is another crucial module in the Redimi solution which communicates data between all the other modules. STRAPI, an opensource Nodejs based Headless Content Management System (CMS) was used to setup a platform for interacting with the smart contracts. PP API serves as a middleware between the blockchain, Mobile Applications, POS Systems and Retailer API (if available). The API allows management of Gift Cards, Coupons, Transactions, Malls/Retailers by serving as the backend-end for the smart contracts. Every change made on the smart contracts is visible on the PP API. Strapi also allows management of data using an integrated front-end. 
+PP API is another crucial module in the Redimi solution which communicates data between all the other modules. STRAPI, an opensource Nodejs based Headless Content Management System (CMS) was used to setup a platform for interacting with the smart contracts. PP API serves as a middleware between the blockchain, Mobile Applications, POS Systems and Retailer API (if available). The API allows management of Gift Cards, Coupons, Transactions, Malls/Retailers by serving as the backend-end for the smart contracts. Every change made on the smart contracts is visible on the PP API. Strapi also allows management of data using an integrated front-end. Strapi communicates data to other modules using REST API. 
+
+## 3. Mobile Applications
+
+Currently, there are two types of mobile solutions available, one for the customers and another for the retailers. 
+
+The mobile application for customers, also known as Mobile Wallet allows customers to register/login and manage their existing gift cards, coupons and transactions. Furthermore, customers can also import and store 3rd party gift cards by scanning their QR/Barcodes. To improve user experience, customers can store wallet addresses as contacts, making it easier to select a contact when transfering gift cards. When redeeming, customers can also choose the amount they wish to redeem from the gift card. A QR code is created with encrypted information regarding the gift card. This information also includes signature from the customer's wallet.
+
+Another mobile application (Redeem Wallet App) was developed for the cashiers at retail stores to provide an easy and independent redeeming solution that does not require any manipulation of the POS System. The Redeem Wallet App allows cashiers to sign in and scan customer gift card QR codes using the phone's camera. As soon as the QR is scanned, the cashier can process and transaction. In response, the cashier receives the amount that was successfully redeemed from the customer's gift card. If any amount remains to be paid, customer can pay it using other resources and/or another gift card.
+
+### 4. Purchase Portal
+
+To allow customers to purchase gift cards with easy and comfort, a purchase portal is setup on the Redimi's website where customers can choose a mall and amount of gift card they wish to purchase. Multiple payment methods are integrated at checkout for the ease of the customer.
+
+## 5. Payment Settlement using Monerium 
+
+After customers redeem gift cards at several retailers, these amounts have to be summed up and transfered to the retailers' bank account. This is made possible by the help of Monerium's e-money solution. Using Monerium's API, the total amount calculated fir each retailer can be transfered from the Mall's Monerium account to the retailers' bank account automatically at regular predefined intervals.
