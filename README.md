@@ -4,7 +4,7 @@ Redimi solution comprises of several modules where each module accomplishes a cr
 
 For the purpose of demonstration, the gift cards can behave as a fungible tokens since they are partially redeemable and transferable. Therefore, a token can be created as shown in [Tokenomy](/XRP%20Scripts/1_Tokenomy/). For transfering of tokens, we have setup multiple wallets including a cold wallet. We have also added token transfer functionality to already available wallet management application as shown in [Wallet Management](/XRP%20Scripts/2_Account_Management/). This allows wallets to transfer tokens directly from the app.
 
-Following sections describe further our existing solution and it sub-modules.
+Following sections describe further our existing solution and its sub-modules:
 
 ## 1. Smart Contracts (SCs)
 
