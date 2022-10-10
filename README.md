@@ -2,11 +2,13 @@
 
 Redimi solution comprises of several modules where each module accomplishes a crucial task. Following is the list of these modules:
 
+For the purpose of demonstration, the gift cards can behave as a fungible tokens since they are partially redeemable and transferable. Therefore, a token can be created as shown in [Tokenomy](/XRP%20Scripts/1_Tokenomy/). For transfering of tokens, we have setup multiple wallets including a cold wallet. We have also added token transfer functionality to already available wallet management application as shown in [Wallet Management](/XRP%20Scripts/2_Account_Management/). This allows wallets to transfer tokens directly from the app.
+
+Following sections describe further our existing solution and it sub-modules.
+
 ## 1. Smart Contracts (SCs)
 
 This module involves development and deploying of smart contracts on Blockchain using Solidity to manage gift cards and coupons. The smart contracts also define security measures to prevent fraudulent transactions by utilizing signatures from multiple parties e.g., customer and retailer. Since each entity participating in this solution requires a Wallet (ethereum), the private keys are used to authorize the transactions on the smart contract. Currently, a separate smart contract exists for management of gift cards and coupons.
-
-For the purpose of demonstration, the gift card can behave as a fungible token since they are partially redeemable and transferable. Therefore, a token can be created as shown in [Tokenomy](/XRP%20Scripts/1_Tokenomy/). For transfering of token, we have setup multiple wallet including a cold wallet. We have also added token transfer functionality to already available wallet management application as shown in [Wallet Management](/XRP%20Scripts/2_Account_Management/). This allows wallets to transfer tokens directly from the app.
 
 ### a. SC for Gift Cards
 
