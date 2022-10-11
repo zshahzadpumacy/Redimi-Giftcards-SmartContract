@@ -1,10 +1,12 @@
-# Redimi-Voucher-SmartContract
+# GRAIL solution on XRPL
 
-Redimi solution comprises of several modules where each module accomplishes a crucial task. Following is the list of these modules:
+GRAIL solution comprises of several modules where each module accomplishes a crucial task.
 
-For the purpose of demonstration, the gift cards can behave as a fungible tokens since they are partially redeemable and transferable. Therefore, a token can be created as shown in [Tokenomy](/XRP%20Scripts/1_Tokenomy/). For transfering of tokens, we have setup multiple wallets including a cold wallet. We have also added token transfer functionality to already available wallet management application as shown in [Wallet Management](/XRP%20Scripts/2_Account_Management/). This allows wallets to transfer tokens directly from the app.
+GRAIL solution aims to deploy a federated sidechain on XRPL. As our usecase includes substantial amount of transactions, in order to meet those requirments we need a sidechain with custom transactors( to customize transaction cost) along with configuration of federators. Hooks will be deployed to execute logic that is currently being done by smart contracts in Ethereum Blockchain. Work on deployment of sidechain and transactors has already begun using expertise gained from XRP development.
 
-Following sections describe further our existing solution and its sub-modules:
+For the purpose of demonstration, the gift cards can behave as a non-fungible tokens since they are partially redeemable and transferable. Therefore, a token can be created as shown in [Tokenomy](/XRP%20Scripts/1_Tokenomy/). For transfering of tokens, we have setup multiple wallets including a cold wallet. We have also added token transfer functionality to already available wallet management application as shown in [Wallet Management](/XRP%20Scripts/2_Account_Management/). This allows wallets to transfer tokens directly from the app.
+
+Following sections describe further our existing solution on Ethereum Blockchain and its sub-modules:
 
 ## 1. Smart Contracts (SCs)
 
