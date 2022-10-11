@@ -1,16 +1,16 @@
-# GRAIL solution on XRPL
+# GRAIL (Grand Retail Chain) solution on XRPL
 
-GRAIL solution comprises of several modules where each module accomplishes a crucial task.
+The GRAIL solution comprises of several modules where each module accomplishes a specific task.
 
-GRAIL solution aims to deploy a federated sidechain on XRPL. As our usecase includes substantial amount of transactions, in order to meet those requirments we need a sidechain with custom transactors( to customize transaction cost) along with configuration of federators. Hooks will be deployed to execute logic that is currently being done by smart contracts in Ethereum Blockchain. Work on deployment of sidechain and transactors has already begun using expertise gained from XRP development.
+The GRAIL solution aims to deploy an open federated sidechain on XRPL. The idea is to offer a sidechain with specific focus on digital applications of the retail industry. These can be the representation of digital assets in general, components of loyalty and reward programs, or giftcards and coupons. As our usecase involves a  substantial amount of transactions, in order to meet those requirments we need a sidechain with custom transactors (to customize transaction costs) along with configuration of federators. Hooks will be deployed to execute logic operations that are currently being done with smart contracts on our private Ethereum Blockchain. The work regarding the deployment of the XRPL sidechain and transactors has already begun thanks to the expertise our team has already gained from their engagment in the XRPL ecosystem.
 
-For the purpose of demonstration, the gift cards can behave as a non-fungible tokens since they are partially redeemable and transferable. Therefore, a token can be created as shown in [Tokenomy](/XRP%20Scripts/1_Tokenomy/). For transfering of tokens, we have setup multiple wallets including a cold wallet. We have also added token transfer functionality to already available wallet management application as shown in [Wallet Management](/XRP%20Scripts/2_Account_Management/). This allows wallets to transfer tokens directly from the app.
+For the purpose of demonstration, the gift cards can behave as semi-fungible tokens since they are one the one hand personalized and unique, and on the other hand  redeemable and transferable. Therefore,an instance of a token can be created as shown in [Tokenomy](/XRP%20Scripts/1_Tokenomy/). For transfering of tokens, we have setup multiple wallets including a cold wallet. We have also added token transfer functionality to an already available wallet management application as shown in [Wallet Management](/XRP%20Scripts/2_Account_Management/). This allows wallets to transfer tokens directly in a peer-to-peer manner.
 
-Following sections describe further our existing solution on Ethereum Blockchain and its sub-modules:
+Following sections describe further our existing solution on our Ethereum Blockchain and its sub-modules:
 
 ## 1. Smart Contracts (SCs)
 
-This module involves development and deploying of smart contracts on Blockchain using Solidity to manage gift cards and coupons. The smart contracts also define security measures to prevent fraudulent transactions by utilizing signatures from multiple parties e.g., customer and retailer. Since each entity participating in this solution requires a Wallet (ethereum), the private keys are used to authorize the transactions on the smart contract. Currently, a separate smart contract exists for management of gift cards and coupons.
+This module involves development and deploying of smart contracts on our private Ethereum Blockchain using Solidity to manage gift cards and coupons. The smart contracts also define security measures to prevent fraudulent transactions by utilizing signatures from multiple parties e.g., customer and retailer. Since each entity participating in this solution requires a Wallet (ethereum), the private keys are used to authorize the transactions on the smart contract. Currently, a separate smart contract exists for the management of gift cards and coupons.
 
 ### a. SC for Gift Cards
 
@@ -20,9 +20,9 @@ This module involves development and deploying of smart contracts on Blockchain 
  
  * Redemption of gift cards: The gift cards can be redeemed at supported retailers. When a gift card is redeemed, this transaction takes place on the smart contract which also updates the amount available in the gift card. To prevent fraud, signatures from customer and retailer are used to authenticate the transaction.
  
- * Transfer voucher ownership: This functionality allows customers to transfer the gift cards to one another. 
+ * Transfer Giftcard ownership: This functionality allows customers to transfer the gift cards to one another. 
  
- * Transfer voucher amount: Apart of transfering a complete voucher, customers can also transfer partial amounts from one voucher to another. 
+ * Transfer Giftcard amount: Apart of transfering a complete Giftcard, customers can also transfer partial amounts from one Giftcard to another. 
  
  * Manage retail partners of the mall: Since gift cards purchased from a mall are only redeemable through supported retailers, this functionality allows adding/removing partner retailers.
  
@@ -52,4 +52,4 @@ To allow customers to purchase gift cards with easy and comfort, a purchase port
 
 ## 5. Payment Settlement using Monerium 
 
-After customers redeem gift cards at several retailers, these amounts have to be summed up and transfered to the retailers' bank account. This is made possible by the help of Monerium's e-money solution. Using Monerium's API, the total amount calculated fir each retailer can be transfered from the Mall's Monerium account to the retailers' bank account automatically at regular predefined intervals.
+After customers redeem gift cards at several retailers, these amounts have to be summed up and transfered to the retailers' bank account. This is made possible by the help of Monerium's e-money solution. Using Monerium's API, the total amount calculated for each retailer can be transfered from the Mall's Monerium account to the retailers' bank account automatically at regular predefined intervals.
